@@ -24,7 +24,7 @@ Download the index.js file into your working directory and then do:
 <script type="module">
   import {Graph, GraphEdge, GraphNode, Points, constructMCS} from './index.js';
   
-  .... rest of the js code goes here....
+  ....js code goes here....
 </script>
 ```
 
