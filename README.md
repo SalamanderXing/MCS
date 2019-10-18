@@ -31,7 +31,7 @@ import {Graph, GraphEdge, GraphNode, Points, constructMCS} from "./index";
 ```
 And you're good to go. 
 
-##Examples
+## Examples
 Check out these two working examples:
-[Molecules Similarity](https://codepen.io/giuliozani/full/zYYoYLo)
-[Shank Language Model](https://codepen.io/giuliozani/full/ZEEpdxQ)
+*[Molecules Similarity](https://codepen.io/giuliozani/full/zYYoYLo)
+*[Shank Language Model](https://codepen.io/giuliozani/full/ZEEpdxQ)
