@@ -9,7 +9,9 @@ If you're working with node.js, you can simply install it via npm:
 npm install maximum-common-subgraph
 ```
 Done! From within your javascript code you can now do:
-```{Graph, GraphEdge, GraphNode, Points, constructMCS} = require('maximum-common-subgraph')```
+```
+{Graph, GraphEdge, GraphNode, Points, constructMCS} = require('maximum-common-subgraph')
+```
 See examples. 
 
 ### Method #2 import module 
@@ -28,3 +30,8 @@ Download the index.ts file into your working directory and then do:
 import {Graph, GraphEdge, GraphNode, Points, constructMCS} from "./index";
 ```
 And you're good to go. 
+
+##Examples
+Check out these two working examples:
+[Molecules Similarity](https://codepen.io/giuliozani/full/zYYoYLo)
+[Shank Language Model](https://codepen.io/giuliozani/full/ZEEpdxQ)
