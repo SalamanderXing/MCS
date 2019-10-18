@@ -35,9 +35,17 @@ import {Graph, GraphEdge, GraphNode, Points, constructMCS} from "./index";
 And you're good to go. 
 
 ## Some more details about the maximum common subgraph problem
-The mcs is a graph with
+Given two graphs, mcs is the largest graph which is structurally identical to both graphs. Constructing the mcs is fundamental in order to compute the similarity beteen two graphs. Indeed this correlation is a value between 0 and 1 which results from the comparison between the size of the mcs and the averaged size of the two original graphs. 
 
-## Online examples
+## Examples
+In the examples foder you'll find two practical applications for this algorithm. 
+### Online examples
 Check out these two working examples on codepen:
 * [Molecules Similarity](https://codepen.io/giuliozani/full/zYYoYLo)
 * [Shank Language Model](https://codepen.io/giuliozani/full/ZEEpdxQ)
+#### NB: these online examples allow you to see the output very well but are not the best option if you want to understand how to use the algorithm youself. For that I recommend taking a look at the ./examples folder.
+
+## Built with
+* [TypeScript](https://www.typescriptlang.org/)
+* [Node.js](https://nodejs.org/en/)
+* [Visjs](https://visjs.github.io/vis-network/examples/) (For visualizing and debugging)
