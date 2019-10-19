@@ -35,7 +35,8 @@ import {Graph, GraphEdge, GraphNode, Points, constructMCS} from "./index";
 And you're good to go. 
 
 ## Usage
-Open one of the two examples in the `./examples` folder.
+See the two examples in the `./examples` folder. They are meant to be an introduction on 
+how to use this algorithm.
 
 ### Online examples
 Check out these two working examples on codepen:
