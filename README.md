@@ -1,10 +1,10 @@
 ![Alt text](imgs/dopamine_serotonin_similarity.png?raw=true "Dopamine Serotonin Similarity")
 # Maximum Common Subgraph
-An algorithm that given two graphs allows you to do two things:
-* compute the similarity (correlation) between the two graphs. 
+An algorithm that given two graphs allows you to:
+* compute the similarity (or correlation) between the two graphs. 
 * construct the maximum common subgraph (MCS) also called the maximum common substructure.
 
-It is a solution to the maximum [common sugraph problem.](https://www.google.com/search?sxsrf=ACYBGNSN6w2aDBEq0Q7AFsOOWMdOjRMidQ%3A1571432071191&ei=hyaqXe-oC9CFmwX94IXABw&q=maximum+common+subgraph+problem&oq=maximum+common+subgraph+problem).
+It is a solution to the maximum [common sugraph problem.](https://www.google.com/search?sxsrf=ACYBGNSN6w2aDBEq0Q7AFsOOWMdOjRMidQ%3A1571432071191&ei=hyaqXe-oC9CFmwX94IXABw&q=maximum+common+subgraph+problem&oq=maximum+common+subgraph+problem)
 
 ## Installation
 ### Method #1 via npm
