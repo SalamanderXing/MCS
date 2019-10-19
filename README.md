@@ -4,7 +4,7 @@ An algorithm that given two graphs allows you to:
 * compute the similarity (or correlation) between the two graphs. 
 * construct the maximum common subgraph (MCS) also called the maximum common substructure.
 
-It is a solution to the maximum [common sugraph problem.](https://www.google.com/search?sxsrf=ACYBGNSN6w2aDBEq0Q7AFsOOWMdOjRMidQ%3A1571432071191&ei=hyaqXe-oC9CFmwX94IXABw&q=maximum+common+subgraph+problem&oq=maximum+common+subgraph+problem)
+It is a simple solution to the maximum [common sugraph problem](https://scholar.google.com/scholar?q=maximum+common+subgraph+problem) for small graphs.
 
 ## Installation
 ### If you're using node 
