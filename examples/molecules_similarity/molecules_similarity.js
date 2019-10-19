@@ -1,23 +1,54 @@
 "use strict";
 import {Points, Graph, GraphEdge, GraphNode, constructMCS} from "./mcs_browser_module.js"
-//Required nodejs packages:
-//node-cmd, express
-//import mcs = require('maximum-common-subgraph');
-//const fs = require('fs');
-//const cmd = require('node-cmd');
-//All the functions which contain the 'Vis' name are functions that create an object compatible with the visjs library, the library I used to represent the graphs on the webpage (see ./display folder)
-//overwrite the Graph class just to add to it the 'name' property, useful just to represent the data.
-//overwrite the default compare and getVisNodeFunction
+/*
+Notice in the following comments I use the word "element" to indicate something that is either an edge or a node of a graph.
+
+EdgeArrows
+    Works as an enumerator for the three types of arrows currently supported by this graph.
+    The arrow types are: "to" = -> , "both" = <-> and node = "--".
+Graph
+    Is a structure which contains an array of GraphNodes and an array of GraphEdges
+GraphNode
+    Is a class constituting the nodes of the graph. See below where it's extended.
+GraphNode
+    Is a class constituting the edges of the graph. See below where it's extended.
+Points
+    Is a class representing the result of a comparison between elements. See the following "compare" function for more details
+constructMCS
+    Is the function containing the main algorithm.
+
+All the functions which contain the 'Vis' name are functions that create an object compatible with the visjs library,
+the library I used to represent the graphs on the web page. See: https://visjs.github.io/vis-network/examples/
+
+ */
+//overwrite the default compare and getVisNode function
 class Atom extends GraphNode {
     constructor(type, id, graph) {
         super(id, graph);
         this.type = type;
+        /*
+           Add the property type, which represent the type of atom ex. "C", carbon.
+        */
     }
     compare(target) {
+        /*
+        The class Points is the result of a compare function.
+        To check whether two elements are similar enough to be added to the mcs, the algorithm will call this function
+        and check the "score" of the resulting points. The score of an object of class Points is the similarity between
+        two elements, a value between 0 and 1.
+        Notice new Points(value, maxValue). Value is the resulting points from the comparison, and maxValue is the maximum
+        points that comparison could possibly yield. Elements with a high maxValue will weight more in the final computation
+        of the similarity between two graphs.
+        In this example all maxValues are set to 1, this means that all elements have equal weight in these graphs.
+         */
         const targetAtom = target;
         return new Points(Number(this.type === targetAtom.type), 1); //give 1 out of 1 points if 'type' is the same
     }
     getVisNode() {
+        /*
+        By overriding this function you can change the way the element will be represented.
+        See: https://visjs.github.io/vis-network/examples/
+         */
         const baseVisNode = super.getVisNode();
         return {
             id: baseVisNode.id,
@@ -32,17 +63,21 @@ class Atom extends GraphNode {
         };
     }
 }
-// create graphs compatible with the syntax described by Shank in his paper, one for each action
-// actions ar open, close, give, take, make agreement gesture, make disagreement gesture, scratch, stroke.
-// notice that for each of these actions there are many possible shank conceptualizations (graph) but here
-// only one for each action is represented.
+/*
+ Define the two molecules. Notice that this algorithm could be used also to represent molecules
+ with different types of chemical bonds. In order to do that you'd need to extend the GraphEdge class.
+ This example doesn't include that for simplicity.
+ see the shank_language_model example for that.
+ */
 const serotonin = new Graph(1, g => {
+    // define an array of nodes with type C, O, H or N.
     const nodes = [...Array(23).keys()].map(i => {
         return [0, 1, 2, 3, 4, 5, 13, 15, 16, 19].indexOf(i) !== -1 ? 'C' :
             [6, 8, 9, 10, 12, 14, 17, 18, 21, 22].indexOf(i) !== -1 ? 'H' :
                 [11, 20].indexOf(i) != -1 ? 'N' :
                     'O';
     }).map((value, index) => new Atom(value, index, g));
+    // define the chemical bond between them
     const edges = [
         [0, 7],
         [7, 8],
@@ -109,25 +144,14 @@ const dopamine = new Graph(2, g => {
         edges: edges
     };
 }, 'dopamine');
-const mcs = constructMCS(dopamine, serotonin, 1);
+/*
+Calling the following function runs the main algorithm.
+
+Notice that the function "constructMCS" has an optional argument called leastElementSimilarity (by default=1).
+When comparing two elements (nodes or edges) let's say element1 and element2 the algorithm will call element1.compare(element2).
+If the compare function returns points with score < leastElementSimilarity that element will not be added to the mcs.
+ */
+const mcs = constructMCS(dopamine, serotonin);
 console.log(`Similarity: ${mcs.pointsSum}`);
 
 export const output = mcs.getDisplayData();
-/*
-//WRITE OUTPUT JSON FILE
-const displayData = mcs.getDisplayData();
-const displayFolder = "../../display";
-const fileName = `${displayFolder}/output.json`;
-fs.writeFile(fileName, JSON.stringify(displayData), (err) => {
-    if (err)
-        console.log(err);
-    console.log(`The file: "${fileName}" was saved!`);
-});
-//CREATE SERVER TO SERVE FILES IN displayFolder STATICALLY
-const express = require('express');
-const server = express();
-server.use(express.static(displayFolder));
-server.listen(8080);
-cmd.run('open http://localhost:8080/index.html'); // OPEN index.html in default browser
-
- */

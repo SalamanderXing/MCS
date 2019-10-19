@@ -7,28 +7,27 @@ An algorithm that given two graphs allows you to:
 It is a solution to the maximum [common sugraph problem.](https://www.google.com/search?sxsrf=ACYBGNSN6w2aDBEq0Q7AFsOOWMdOjRMidQ%3A1571432071191&ei=hyaqXe-oC9CFmwX94IXABw&q=maximum+common+subgraph+problem&oq=maximum+common+subgraph+problem)
 
 ## Installation
-### Method #1 via npm
-If you're working with node.js, you can simply install it via npm:
+### If you're using node 
+Simply install it via npm:
 ```
 npm install maximum-common-subgraph
 ```
-Done! From within your javascript code you can now do:
+Done! You can now do:
 ```
 {Graph, GraphEdge, GraphNode, Points, constructMCS} = require('maximum-common-subgraph')
 ```
-See examples. 
 
-### Method #2 import module 
-Download the index.js file into your working directory and then do:
+### If you want to use it in the browser
+Download the mcs_browser_module.js file into your working directory and then do:
 ```
 <script type="module">
-  import {Graph, GraphEdge, GraphNode, Points, constructMCS} from './index.js';
+  import {Graph, GraphEdge, GraphNode, Points, constructMCS} from './mcs_browser_module.js';
   
   ....js code goes here....
 </script>
 ```
 
-### Method #3 with TypeScript
+### If you're using TypeScript
 Download the index.ts file into your working directory and then do:
 ```
 import {Graph, GraphEdge, GraphNode, Points, constructMCS} from "./index";
