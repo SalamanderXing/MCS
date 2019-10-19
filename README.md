@@ -1,10 +1,10 @@
 ![Alt text](imgs/dopamine_serotonin_similarity.png?raw=true "Dopamine Serotonin Similarity")
 # Maximum Common Subgraph
 An algorithm that given two graphs allows you to:
-* compute the similarity (or correlation) between the two graphs. 
+* compute their similarity (or correlation). 
 * construct the maximum common subgraph (MCS) also called the maximum common substructure.
 
-It is a simple solution to the maximum [common sugraph problem](https://scholar.google.com/scholar?q=maximum+common+subgraph+problem) for small graphs.
+It is a simple solution to the [maximum common sugraph problem](https://scholar.google.com/scholar?q=maximum+common+subgraph+problem) for small graphs.
 
 ## Installation
 ### If you're using node 
@@ -42,7 +42,7 @@ how to use this algorithm.
 Check out these two working examples on codepen:
 * [Molecules Similarity](https://codepen.io/giuliozani/full/zYYoYLo)
 * [Shank Language Model](https://codepen.io/giuliozani/full/ZEEpdxQ)
-#### NB: these online examples allow you to see the output very well but are not the best option if you want to understand how to use the algorithm yourself. For that I recommend taking a look at the `./examples` folder.
+##### NB: these online examples allow you to see the output very well but are not the best option if you want to understand how to use the algorithm yourself. For that I recommend taking a look at the `./examples` folder. That's because I had to squeeze all the modules into one file, thereby making it less clear. 
 
 ## Some details about the coding style and performance
 The algorithm is written in pure functional programming style. As such it makes heavy use of recursion. However it is 
