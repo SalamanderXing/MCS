@@ -58,6 +58,9 @@ Indeed this correlation is a value between 0 and 1 which results from the compar
 the averaged size of the two original graphs. 
 I'll write a more detailed mathematical explanation soon.
 
+## Future projects
+* Create a python version of this algorithm.
+
 ## Built with
 * [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/en/)
