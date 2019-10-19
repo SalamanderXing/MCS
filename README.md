@@ -62,6 +62,7 @@ I'll write a more detailed mathematical explanation soon.
 * Create a python version of this algorithm.
 
 ## Built with
+* ES6
 * [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/en/)
 * [Visjs](https://visjs.github.io/vis-network/examples/) (for visualizing and debugging)
