@@ -45,8 +45,8 @@ Check out these two working examples on codepen:
 
 ## Some details about the coding style and performance
 The algorithm is written in pure functional programming style. As such it makes heavy use of recursion. However it is 
-designed such that the javascript interpreter can perform tail-call optimization 
-(all recursive calls are at the last statement of the function) in order to not produce a `maximum calls stack exceeded` error.
+designed such that javascript interpreter can perform tail-call optimization 
+(all recursive calls are at the last statement of the function) in order to prevent a `maximum calls stack exceeded` error.
 That said I still have to test the algorithm for graphs with >23 nodes.
 
 
