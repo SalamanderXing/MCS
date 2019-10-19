@@ -86,14 +86,20 @@ class ShankNode extends GraphNode {
         };
     }
 }
-// create graphs compatible with the syntax described by Shank in his paper, one for each action
-// actions ar open, close, give, take, make agreement gesture, make disagreement gesture, scratch, stroke.
-// notice that for each of these actions there are many possible shank conceptualizations (graph) but here
-// only one for each action is represented.
+/* create graphs compatible with the syntax described by Shank in his paper, one for each action
+ actions ar open, close, give, take, make agreement gesture, make disagreement gesture, scratch, stroke.
+ notice that for each of these actions there are many possible shank conceptualizations (graph) but here
+ only one for each action is represented.
+
+ Notice every graph needs:
+  • id (below = 1),
+  • a function which returns the nodes and edges and
+  • a "name" (below = 'open')
+ */
 const open = new Graph(1, g => {
     //create an array of nodes.
     const nodes = [
-        new ShankNode('<===>', 0, g), //<-- nodes always need an id and "g" which is the reference to the graph they belong to
+        new ShankNode('<===>', 0, g), //<-- nodes always need an id=0 and "g" which is the reference to the graph they belong to
         new ShankNode('person', 1, g),
         new ShankNode('DO', 2, g),
         new ShankNode('STATE CHANGE: OBJECT', 3, g),

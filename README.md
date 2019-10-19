@@ -34,18 +34,30 @@ import {Graph, GraphEdge, GraphNode, Points, constructMCS} from "./index";
 ```
 And you're good to go. 
 
-## Some more details about the maximum common subgraph problem
-Given two graphs, mcs is the largest graph which is structurally identical to both graphs. Constructing the mcs is fundamental in order to compute the similarity beteen two graphs. Indeed this correlation is a value between 0 and 1 which results from the comparison between the size of the mcs and the averaged size of the two original graphs. 
+## Usage
+Open one of the two examples in the `./examples` folder.
 
-## Examples
-In the examples foder you'll find two practical applications for this algorithm. 
 ### Online examples
 Check out these two working examples on codepen:
 * [Molecules Similarity](https://codepen.io/giuliozani/full/zYYoYLo)
 * [Shank Language Model](https://codepen.io/giuliozani/full/ZEEpdxQ)
-#### NB: these online examples allow you to see the output very well but are not the best option if you want to understand how to use the algorithm youself. For that I recommend taking a look at the ./examples folder.
+#### NB: these online examples allow you to see the output very well but are not the best option if you want to understand how to use the algorithm yourself. For that I recommend taking a look at the `./examples` folder.
+
+## Some details about the coding style and performance
+The algorithm is written in pure functional programming style. As such it makes heavy use of recursion. However it is 
+designed such that the javascript interpreter can perform tail-call optimization 
+(all recursive calls are at the last statement of the function) in order to not produce a `maximum calls stack exceeded` error.
+That said I still have to test the algorithm for graphs with >23 nodes.
+
+
+## Some more details about the maximum common subgraph problem
+Given two graphs, mcs is the largest graph which is structurally identical to both graphs.
+Constructing the mcs is fundamental in order to compute the similarity between two graphs. 
+Indeed this correlation is a value between 0 and 1 which results from the comparison between the size of the mcs and 
+the averaged size of the two original graphs. 
+I'll write a more detailed mathematical explanation soon.
 
 ## Built with
 * [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/en/)
-* [Visjs](https://visjs.github.io/vis-network/examples/) (For visualizing and debugging)
+* [Visjs](https://visjs.github.io/vis-network/examples/) (for visualizing and debugging)

@@ -68,6 +68,11 @@ class Atom extends GraphNode {
  with different types of chemical bonds. In order to do that you'd need to extend the GraphEdge class.
  This example doesn't include that for simplicity.
  see the shank_language_model example for that.
+
+  Notice every graph needs:
+  • id (below = 1),
+  • a function which returns the nodes and edges and
+  • a "name" (below = 'open')
  */
 const serotonin = new Graph(1, g => {
     // define an array of nodes with type C, O, H or N.
