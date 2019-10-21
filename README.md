@@ -66,3 +66,11 @@ I'll write a more detailed mathematical explanation soon.
 * [TypeScript](https://www.typescriptlang.org/)
 * [Node.js](https://nodejs.org/en/)
 * [Visjs](https://visjs.github.io/vis-network/examples/) (for visualizing and debugging)
+
+## Acknowledgements
+[Moritz F. Wurm, Ph.D.](https://webapps.unitn.it/du/en/Persona/PER0119546/Curriculum) 
+was the who kick-started this project. 
+He has also given me invaluable feedback throughout the development of this algorithm during an internship I have done at his lab. 
+For more details about the reason why this algorithm was created in the first place
+ check out the readme of [this example]()
+
