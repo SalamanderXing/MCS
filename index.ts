@@ -13,9 +13,9 @@ export class Points{
      */
     readonly value:number;
     readonly maxValue:number;
-    get score(){ return this.maxValue === 0 ? 0 : this.value/this.maxValue }
-    plus(otherPoints:Points):Points{ return new Points(this.value + otherPoints.value, this.maxValue + otherPoints.maxValue) }
-    toString(){return `Points:${this.value}/${this.maxValue}=${this.score}`}
+    get score (){ return this.maxValue === 0 ? 0 : this.value/this.maxValue }
+    plus = (otherPoints:Points):Points => new Points(this.value + otherPoints.value, this.maxValue + otherPoints.maxValue);
+    toString = () => `Points:${this.value}/${this.maxValue}=${this.score}`;
     constructor(value:number, maxValue:number){
         if(value < 0) throw 'Value must be >= 0';
         if(value > maxValue) throw 'cannot have more points than the maximum points';
@@ -73,10 +73,6 @@ export class GraphEdge{
             '' :'-',
             'to,from':'←→'
         }[this.arrows];
-        if(this.from === undefined || this.to === undefined){
-            debugger;
-            throw `${this.from ? "FROM: \n"+JSON.stringify(this.from.getVisNode()):""}\n${this.to ? "TO:\n"+JSON.parse(JSON.stringify(this.to.getVisNode())) : ""}`
-        }
         this.id =   `${this.from.id}${arrowLabel}${this.to.id}`;
     }
 }

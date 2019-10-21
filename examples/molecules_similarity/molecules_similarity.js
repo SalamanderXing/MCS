@@ -79,7 +79,7 @@ const serotonin = new Graph(1, g => {
     const nodes = [...Array(23).keys()].map(i => {
         return [0, 1, 2, 3, 4, 5, 13, 15, 16, 19].indexOf(i) !== -1 ? 'C' :
             [6, 8, 9, 10, 12, 14, 17, 18, 21, 22].indexOf(i) !== -1 ? 'H' :
-                [11, 20].indexOf(i) != -1 ? 'N' :
+                [11, 20].indexOf(i) !== -1 ? 'N' :
                     'O';
     }).map((value, index) => new Atom(value, index, g));
     // define the chemical bond between them
