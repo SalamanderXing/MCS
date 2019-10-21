@@ -70,7 +70,7 @@ I'll write a more detailed mathematical explanation soon.
 ## Acknowledgements
 [Moritz F. Wurm, Ph.D.](https://webapps.unitn.it/du/en/Persona/PER0119546/Curriculum) 
 was the who kick-started this project. 
-He has also given me invaluable feedback throughout the development of this algorithm during an internship I have done at his lab. 
+He has also given me fundamental feedback throughout the development of this algorithm during an internship I have done at his lab. 
 For more details about the reason why this algorithm was created in the first place
  check out the readme of [this example.](https://github.com/GiulioZani/MCS/tree/master/examples/schank_language_model)
 
