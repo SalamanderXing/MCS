@@ -72,5 +72,5 @@ I'll write a more detailed mathematical explanation soon.
 was the who kick-started this project. 
 He has also given me invaluable feedback throughout the development of this algorithm during an internship I have done at his lab. 
 For more details about the reason why this algorithm was created in the first place
- check out the readme of [this example]()
+ check out the readme of [this example.](https://github.com/GiulioZani/MCS/tree/master/examples/schank_language_model)
 
