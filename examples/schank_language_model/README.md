@@ -8,7 +8,7 @@ In september 2019 I have done a 3-weeks internship at the CIMeC (University of T
  
 During this time, we attempted to test Schank's language model by comparing two set of data:
 * data obtained through representational similarity analysis (RSA) of fMRI results relative 8 actions (shown via video or the display of written sentences). 
-These was among the results obtained earlier by Moritz F. Wurm and explained in his paper: [distinct roles of temporal and frontoparietal cortex in representing actions across vision and language](https://www.nature.com/articles/s41467-018-08084-y)
+These was among the results obtained earlier by Moritz F. Wurm and explained in his paper: [distinct roles of temporal and frontoparietal cortex in representing actions across vision and language.](https://www.nature.com/articles/s41467-018-08084-y)
 * data obtained by computing the similarity between graph-conceptualizations of those 8 actions, using a prototype of this MCS algorithm. 
 These conceptualizations (see this [online example](https://codepen.io/giuliozani/full/ZEEpdxQ)) were created after trying to understand Roger C. Schank's 1973 paper "THE FOURTEEN PRIMITIVE ACTIONS AND THEIR INFERENCES" .  
 
